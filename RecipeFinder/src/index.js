@@ -1,6 +1,6 @@
 // Brandon
 // Navigation and routingconfig - usingchapter 6.2 listing 6.2 pattern code design with changing but removing push and use v7 createNativeStackNavigator instead of createStackNavigator.
-// Used Ai to learn more about the new v7 createNativeStackNavigator and how to use it with the bottom tab navigator. The code is based on the chapter 6.2 pattern but with some changes to fit the recipe finder app.
+// learn more about the new v7 createNativeStackNavigator and how to use it with the bottom tab navigator. The code is based on the chapter 6.2 pattern but with some changes to fit the recipe finder app.
 
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
@@ -22,7 +22,7 @@ const SearchStack = createNativeStackNavigator()
 const FavoritesStack = createNativeStackNavigator()
 
 // Do a shared header style for every stack
-// used Ai to learn about shared header style for every stack
+// learn about shared header style for every stack
 const stackOptions = {
   headerStyle: {
     backgroundColor: colors.primary
