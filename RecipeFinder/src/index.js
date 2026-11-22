@@ -50,9 +50,12 @@ const SearchNav = () => (
 )
 
 // favorites
+// Vishal - filled in with the same pattern as HomeNav: 'Favorites' screen + 'RecipeDetails' screen
 const FavoritesNav = () => (
-  // code goes here — same pattern as HomeNav: 'Favorites' screen + 'RecipeDetails' screen
-  null
+  <FavoritesStack.Navigator screenOptions={stackOptions}>
+    <FavoritesStack.Screen name='Favorites' component={Favorites} />
+    <FavoritesStack.Screen name='RecipeDetails' component={RecipeDetails} options={detailsOptions} />
+  </FavoritesStack.Navigator>
 )
 // the below is recommended by Windsurf autocomplete to prevent same name crashes.  I don't fully understand it so I have it here to follow-up ono later.
 // tab names end in 'Tab' so they do not collide with the stack screen names inside them

@@ -12,6 +12,13 @@ Brandon - files that are presented have notes when Ai was used. A majority of my
 
 Jacqueline:
 
-Vishal:
-
+Vishal - I own Favorites, persistence for favorites, and testing.
+- `RecipeFinder/App.js`: I wrote `toggleFavorite`, `isFavorite` and `saveFavorites`, and the part of `componentDidMount` that loads the saved favorites. Favorites are stored with AsyncStorage under the key `RecipeFinder:favorites`. They load when the app starts and save on every toggle. The add/remove logic follows the PE03 toggleComplete / deleteTodo pattern (spread + filter). I did not change anything else in App.js.
+- `RecipeFinder/src/Favorites/Favorites.js`: the Favorites screen. It reads `recipes` and `favorites` from RecipeContext, shows the favorited recipes with Brandon's RecipeCard, and shows CenterMessage when the list is empty. Tapping a recipe opens RecipeDetails the same way Home.js does.
+- `RecipeFinder/src/index.js`: I filled in `FavoritesNav` with the same pattern as `HomeNav` so the Favorites tab has a screen. This is Brandon's file, so Brandon please check it.
+- `RecipeFinder/package.json`: added `@react-native-async-storage/async-storage` and the React Navigation packages from `file architecture.md` with `npx expo install`, because App.js and src/index.js import them. Now `npm install` is enough to set up the project, and the app bundles with `npx expo export`.
+- `README.md` and `MEETINGS.md`: added both at the top of the repo. MEETINGS.md has a section for each of us to explain our own tasks, mine is filled in.
+- `RecipeFinder/TESTING.md`: manual test checklist for every screen. Nothing has been run in Expo yet because Search, Recipe Details and the recipe data are still placeholders, so every test is marked "Not run". I will run it and record results for TP03.
+- TP02 report: I am doing the references section and the APA check.
+- Next for TP03: run the checklist on a real device, and work with Enzo on the favorite button in RecipeDetails (it should call `toggleFavorite` / `isFavorite` from the context).
 Enzo:
